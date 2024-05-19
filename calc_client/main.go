@@ -16,11 +16,18 @@ import (
 
 func main() {
 	r := gin.Default()
+
+	r.LoadHTMLGlob("templates/*.html")
+
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "pong",
 		})
 	})
+	r.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.html", gin.H{})
+	})
+
 	r.GET("/add/:a/:b", func(c *gin.Context) {
 		a, _ := strconv.Atoi(c.Param("a"))
 		b, _ := strconv.Atoi(c.Param("b"))
