@@ -12,7 +12,5 @@ cd calculator_gin_rust
 ```
 
 ```bash
-make clean
-make build
-make run
+make clean && make build && make run
 ```

@@ -24,6 +24,7 @@ func main() {
 			"message": "pong",
 		})
 	})
+
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{})
 	})
@@ -36,6 +37,7 @@ func main() {
 			"result": result,
 		})
 	})
+
 	r.GET("/subtract/:a/:b", func(c *gin.Context) {
 		a, _ := strconv.Atoi(c.Param("a"))
 		b, _ := strconv.Atoi(c.Param("b"))
@@ -44,6 +46,7 @@ func main() {
 			"result": result,
 		})
 	})
+
 	r.GET("/multiply/:a/:b", func(c *gin.Context) {
 		a, _ := strconv.Atoi(c.Param("a"))
 		b, _ := strconv.Atoi(c.Param("b"))
@@ -52,6 +55,7 @@ func main() {
 			"result": result,
 		})
 	})
+
 	r.GET("/divide/:a/:b", func(c *gin.Context) {
 		a, _ := strconv.Atoi(c.Param("a"))
 		b, _ := strconv.Atoi(c.Param("b"))
@@ -66,5 +70,6 @@ func main() {
 			"result": result,
 		})
 	})
+
 	r.Run()
 }

@@ -35,4 +35,4 @@ clean:
 .PHONY: run
 run: $(GO_CLIENT)
 	@echo "Running Go client..."
-	./$(GO_CLIENT)
+	cd $(GO_CLIENT_DIR) && ./calc_client
