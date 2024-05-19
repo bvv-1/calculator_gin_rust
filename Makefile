@@ -8,8 +8,8 @@ RUST_LIB := $(RUST_LIB_DIR)/target/release/libcalc_lib.dylib
 GO_CLIENT := $(GO_CLIENT_DIR)/calc_client
 
 # デフォルトターゲット
-.PHONY: all
-all: $(GO_CLIENT)
+.PHONY: build
+build: $(GO_CLIENT)
 
 # Rustライブラリのビルドターゲット
 $(RUST_LIB):
