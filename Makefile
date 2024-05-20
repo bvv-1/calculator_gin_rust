@@ -3,7 +3,7 @@ RUST_LIB_DIR := calc_lib
 # Goクライアントのディレクトリ
 GO_CLIENT_DIR := calc_client
 # ビルドされたRustライブラリのパス
-RUST_LIB := $(RUST_LIB_DIR)/target/release/libcalc_lib.dylib
+RUST_LIB := $(RUST_LIB_DIR)/target/release/libcalc_lib.a
 # Goクライアントの出力ファイル
 GO_CLIENT := $(GO_CLIENT_DIR)/calc_client
 
