@@ -17,7 +17,4 @@ MacOSの場合、以下のコマンドを実行してください。
 make clean && make build && make run
 ```
 
-```bash
-cd calc_client
-./calc_client
-```
+それ以外の場合、頑張ってビルドしてください笑
